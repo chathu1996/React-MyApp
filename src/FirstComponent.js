@@ -2,13 +2,20 @@ import React, { Component } from "react";
 
 class FirstComponents extends Component{
     render() {
-        // console.log(this.props);
-        const { name, age } = this.props;
+        const { students } = this.props;
+        const studentList = students.map(student =>{
+            return(
+                <div className="first-component" key={student.id}>
+                    <div>Name: { student.name }</div>
+                    <div>Age: { student.age }</div>
+                    <div>Belt: { student.belt }</div>
+                    <br />
+                </div>
+            ); 
+        });
         return(
-            <div className="first-component">
-                <div>Name: { name }</div>
-                <div>Age: { age }</div>
-                <div>University: Sabaragamuwa University</div>
+            <div className="student-list">
+                { studentList } 
             </div>
         ); 
     }
