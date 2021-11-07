@@ -14,12 +14,19 @@ class App extends React.Component {
       ]
     }
   }
+  addStudents = ( student ) => {
+    student.id = Math.random();
+    let students = [...this.state.students, student];
+    this.setState({
+      student: students
+    });
+  }
   render() {
     return (
       <div>
         <h1>My First React App</h1>
         <FirstComponents students = { this.state.students }/>
-        <AddStudents />
+        <AddStudents addStudents = { this.addStudents }/>
       </div>
     );
   }
