@@ -1,6 +1,7 @@
 import './App.css';
 import FirstComponents from './FirstComponent';
 import React from 'react';
+import AddStudents from './AddStudent';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends React.Component {
       <div>
         <h1>My First React App</h1>
         <FirstComponents students = { this.state.students }/>
+        <AddStudents />
       </div>
     );
   }
