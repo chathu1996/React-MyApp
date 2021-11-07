@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state  ={
       students : [
-        { name: "Chathu", age: 25, belt: 'Black', id: 1},
+        { name: "Chathu", age: 18, belt: 'Black', id: 1},
         { name: "Hiru", age: 24, belt: 'Red', id: 2},
         { name: "Jaya", age: 25, belt: 'Green', id: 3}
       ]
