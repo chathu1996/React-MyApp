@@ -21,11 +21,20 @@ class App extends React.Component {
       student: students
     });
   }
+  deleteStudent = (id) => {
+    let students = this.state.students.filter(student => {
+      return student.id !== id;
+    });
+    this.setState({
+      students: students
+    });
+
+  }
   render() {
     return (
       <div>
         <h1>My First React App</h1>
-        <FirstComponents students = { this.state.students }/>
+        <FirstComponents deleteStudent={ this.deleteStudent } students = { this.state.students }/>
         <AddStudents addStudents = { this.addStudents }/>
       </div>
     );
